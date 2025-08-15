@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 Practice</title>
+
+    <style>
+        .block-test {
+            border: 1px solid red;
+        }
+
+        .display-block {
+            display: block;
+        }
+
+        .display-inline-block {
+            display: inline-block;
+        }
+
+        .display-inline {
+            display: inline;
+        }
+
+        .circle {
+            width:10px;
+            height: 10px;
+            background-color: orange;
+            border-radius: 100%;
+        }
+
+        .vertical-align-bottom {
+            vertical-align: bottom;
+        }
+
+        .vertical-align-text-top {
+            vertical-align: text-top;
+        }
+    </style>
+</head>
+<body>
+    <h1>1. What's the difference between `block`, `inline`, and `inline-block`?</h1>
+
+    <h2>Vertical-align tests</h2>
+
+    <div class="block-test">
+        Vertical-align (block): <div class="circle display-block vertical-align-bottom"></div>
+    </div>
+
+    </br>
+
+    <div class="block-test">
+        Vertical-align (inline-block): <div class="circle display-inline-block vertical-align-bottom"></div>
+    </div>
+
+    </br>
+
+    <div class="block-test" style="font-size: 2rem;">
+        Vertical-align (inline): <div class="display-inline vertical-align-text-top" style="font-size: 1rem;">inline test</div>
+    </div>
+    
+    <h2>Margins and paddings test</h2>
+
+    <div
+        style="display: block; margin: 10px; padding: 10px; border: 1px solid green;"
+    >
+        Block
+    </div>
+
+    <div
+        style="display: inline-block; margin: 10px; padding: 10px; border: 1px solid green;"
+    >
+        Inline-block
+    </div>
+
+    <div
+        style="display: inline; margin: 300px; padding: 10px; border: 1px solid green;"
+    >
+        Inline
+    </div>
+
+    <h2>Float tests</h2>
+    <div
+        style="display: block; margin: 10px; padding: 10px; border: 1px solid green;float: left;"
+    >
+        Block
+    </div>
+
+    <div
+        style="display: inline-block; margin: 10px; padding: 10px; border: 1px solid green; float: right;"
+    >
+        Inline-block
+    </div>
+
+    <div
+        style="display: inline; margin: 300px; padding: 10px; border: 1px solid green; float: right;"
+    >
+        Inline
+    </div>
+
+</body>
+</html>
