@@ -83,3 +83,66 @@ Those are possible values of the display property.</br>
 </table>
 
 [Practicing/testing question concepts](./q1/)
+
+## 2. What's the difference between a JavaScript variable that is: `null`, `undefined` or undeclared? How would you go about checking for any of these states?
+<b>Date: 14/08/2025</b></br>
+<b>My original answer:</b></br>
+A Javascript variable that is null was declared and assigned the value null. Undefined is reserved for variables that were declared but not assigned yet (no value was given to it). If you try to use a variable that is undeclared, Javascript will throw a ReferenceError in strict mode, because it is needed to declare the variable using one of the declaration reserved words: var, let or const.
+</br>
+<b>Complementing after reading the solution:</b>
+<table>
+    <tr>
+        <th>
+            Trait
+        </th>
+        <th>
+            Null
+        </th>
+        <th>
+            Undefined
+        </th>
+        <th>
+            Undeclared
+        </th>
+    </tr>
+    <tr>
+        <td>
+            Type (via typeof operator)
+        </td>
+        <td>
+            'object'
+        </td>
+        <td>
+            'undefined'
+        </td>
+        <td>
+            'undefined'
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Equality comparison
+        </td>
+        <td>
+            null === 'undefined' is true
+        </td>
+        <td>
+            'undefined' == null is true
+        </td>
+        <td>
+            Throws a ReferenceError
+        </td>
+    </tr>
+</table>
+
+<b>Undeclared:</b></br>
+Undeclared variables will be defined globaly, outside of the current scope. In strict mode, a `ReferenceError` will be thrown if you try to assign a value to an undeclared variable. Undeclared variables are as bad as global variables. Avoid them at all costs!
+Using the strict comparison operator in undeclared variables will return 'undefined'
+</br>
+<b>Undefined:</b></br>
+Check with typeof operator will return 'undefined' string. You can also compare with strict equality operator (===). If you compare with loose equality operator (==), it will also return true if the value is `null`, a deceiving behavior.
+</br>
+<b>Null:</b></br>
+You can compare with the reserved word `null`. If you use the typeof operator, expect to get the string 'object'. Do not use the loose equality operator to compare with 'undefined' since it will wrongfuly return true.
+
+[Practicing/testing question concepts](./q2/)
