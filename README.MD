@@ -216,3 +216,15 @@ You can usually access the prototype of an object with `Object.getPrototypeOf(my
 [Go to Summary](#summary)
 
 ## 4. Implement `Array.prototype.reduce`. To avoid overwriting the actual `Array.prototype.reduce` which is being used by the autograder, we shall instead implement it as `Array.prototype.myReduce`.
+<b>Date: 19/08/2025</b></br>
+<b>Concepts needed:</b></br>
+1. <b>Array.prototype.reduce:</b> definition is needed to code all the nuances of the function. See documentation [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+2. Loops
+3. Conditionals
+4. Prototype chain
+
+[Practicing/testing question concepts](./q4/)
+</br>
+[Question source](https://www.greatfrontend.com/interviews/study/gfe75/questions/javascript/array-reduce)
+</br>
+[Go to Summary](#summary)
